@@ -107,8 +107,8 @@ class MainActivity : AppCompatActivity() {
     }
     private fun setPic() {
         // Get the dimensions of the View
-        val targetW: Int = 100
-        val targetH: Int = 100
+        val targetW: Int = 1000
+        val targetH: Int = 1000
 
         val bmOptions = BitmapFactory.Options().apply {
             // Get the dimensions of the bitmap
