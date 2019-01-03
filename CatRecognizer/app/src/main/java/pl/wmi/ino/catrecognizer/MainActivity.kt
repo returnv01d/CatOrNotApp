@@ -14,6 +14,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.graphics.Color;
+import android.widget.Button
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -23,20 +25,34 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.concurrent.schedule
 
+
 class MainActivity : AppCompatActivity() {
 
+
     var mCurrentPhotoPath = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        button4.setOnClickListener{
+            screen.setBackgroundColor(Color.WHITE)
+        }
+        button5.setOnClickListener{
+            screen.setBackgroundColor(Color.BLACK)
+    }
+
         setSupportActionBar(toolbar)
 
         photoButton.setOnClickListener {
             dispatchTakePictureIntent()
 
         }
+
     }
 
+
+    
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
@@ -48,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_settings-> true
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -133,7 +149,6 @@ class MainActivity : AppCompatActivity() {
         Timer("SettingUp", false).schedule(1000) {
             runOnUiThread {
                 resultTextView.text = if (RandomResult.nextResult()) "Kot" else "Nie kot"
-
             }
         }
     }

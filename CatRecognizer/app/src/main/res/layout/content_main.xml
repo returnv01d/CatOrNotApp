@@ -15,21 +15,26 @@
 
         <ImageView
                 android:layout_width="300dp"
-                android:layout_height="300dp" tools:srcCompat="@tools:sample/backgrounds/scenic"
+                android:layout_height="300dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic"
                 android:id="@+id/imageView"
                 android:layout_gravity="center"/>
         <Button
                 android:text="Button"
                 android:layout_width="149dp"
-                android:layout_height="87dp" android:id="@+id/photoButton"
+                android:layout_height="87dp"
+                android:id="@+id/photoButton"
                 android:layout_gravity="bottom|center"/>
+
         <TextView
                 android:text="TextView"
+                android:textColor="@color/darkColorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="82dp" android:id="@+id/resultTextView"
                 android:layout_gravity="top|fill_horizontal|center"
                 android:gravity="center"
                 android:textSize="40dp"
-        />
+
+                tools:shadowColor="@android:color/background_dark"/>
     </FrameLayout>
 </android.support.constraint.ConstraintLayout>
