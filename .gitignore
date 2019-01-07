@@ -1,0 +1,27 @@
+CatRecognizer/*/build/
+
+# Crashlytics configuations
+CatRecognizer/com_crashlytics_export_strings.xml
+
+# Local configuration file (sdk path, etc)
+CatRecognizer/local.properties
+
+# Gradle generated files
+CatRecognizer/.gradle/
+
+# Signing files
+CatRecognizer/.signing/
+
+# User-specific configurations
+CatRecognizer/.idea/libraries/
+CatRecognizer/.idea/workspace.xml
+CatRecognizer/.idea/tasks.xml
+CatRecognizer/.idea/.name
+CatRecognizer/.idea/compiler.xml
+CatRecognizer/.idea/copyright/profiles_settings.xml
+CatRecognizer/.idea/encodings.xml
+CatRecognizer/.idea/misc.xml
+CatRecognizer/.idea/modules.xml
+CatRecognizer/.idea/scopes/scope_settings.xml
+CatRecognizer.idea/vcs.xml
+CatRecognizer/*.iml
