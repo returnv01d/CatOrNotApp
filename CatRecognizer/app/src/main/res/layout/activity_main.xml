@@ -25,34 +25,6 @@
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_main"/>
-    <Button
-            android:text="button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/button2"/>
-    <Button
-            android:text="/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/button"/>
-    <Button
 
-            android:text="button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/button3"/>
-    <Button android:text="Day"
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-
-    />
-    <Button android:text="Night"
-            android:id="@+id/button5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-
-
-
-    />
 
 </android.support.design.widget.CoordinatorLayout>

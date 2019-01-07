@@ -20,14 +20,28 @@
                 android:id="@+id/imageView"
                 android:layout_gravity="center"/>
         <Button
-                android:text="Button"
+                android:text="Zdjęcie"
                 android:layout_width="149dp"
                 android:layout_height="87dp"
                 android:id="@+id/photoButton"
                 android:layout_gravity="bottom|center"/>
+        <Button android:text="Dzień"
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+
+        />
+        <Button android:text="Noc"
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+
+
+        />
 
         <TextView
-                android:text="TextView"
                 android:textColor="@color/darkColorPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="82dp" android:id="@+id/resultTextView"
