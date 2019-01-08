@@ -32,11 +32,12 @@ import kotlin.concurrent.schedule
 
 class MainActivity : AppCompatActivity() {
 
-    var odinstalujPressed = 0
-    var mCurrentPhotoPath = ""
-
     companion object {
         var day = true
+
+        var odinstalujPressed = 0
+        var mCurrentPhotoPath = ""
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
