@@ -14,4 +14,25 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+
+
+    @Test
+    fun no_long_sequences() {
+        val list = (1..1000).map {RandomResult.nextResult()}
+
+        var longest_sequence = 1;
+        var current_sequence = 1;
+        var last_result = list.first()
+        for (i in list.drop(1)) {
+            if (i==last_result) {
+                current_sequence++
+            } else {
+                current_sequence=1
+                last_result=i
+            }
+            if (current_sequence>longest_sequence) longest_sequence = current_sequence
+        }
+
+        assertTrue(longest_sequence <= 4)
+    }
 }
