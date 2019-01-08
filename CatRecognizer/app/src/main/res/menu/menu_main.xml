@@ -2,21 +2,13 @@
       xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:tools="http://schemas.android.com/tools"
       tools:context="pl.wmi.ino.catrecognizer.MainActivity">
-    <item android:id="@+id/action_settings"
-          android:title="@string/action_settings"
-          android:orderInCategory="100"
-          app:showAsAction="never" android:visible="true" android:checked="false"
-          android:checkable="false"/>
     <item android:id="@+id/action_odinstaluj"
           android:title="@string/action_odinstaluj"
           android:orderInCategory="100"
           app:showAsAction="never" android:visible="true" android:checked="false"
-          android:checkable="false"/>
-    <item android:id="@+id/action_pomoc"
-          android:title="@string/action_pomoc"
-          android:orderInCategory="100"
-          app:showAsAction="always|withText"/>
+          android:checkable="false"/><![CDATA[
 
 
     />
+]]>
 </menu>

@@ -94,10 +94,6 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
-            R.id.action_settings-> {
-                true
-                // Tutaj dajesz co ma się stać jak klikniesz w coś o id action_settings z menu
-            }
             R.id.action_odinstaluj-> {
                 odinstalujPressed = 1
                 resultTextView.text = ""
