@@ -94,8 +94,8 @@ class MainActivity : AppCompatActivity() {
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
             R.id.action_settings-> {
-                // Tutaj dajesz co ma się stać jak klikniesz w coś o id action_settings z menu
                 true
+                // Tutaj dajesz co ma się stać jak klikniesz w coś o id action_settings z menu
             }
             R.id.action_odinstaluj-> {
                 odinstalujPressed = 1
