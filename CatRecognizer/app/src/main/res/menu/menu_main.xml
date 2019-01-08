@@ -7,6 +7,11 @@
           android:orderInCategory="100"
           app:showAsAction="never" android:visible="true" android:checked="false"
           android:checkable="false"/>
+    <item android:id="@+id/action_odinstaluj"
+          android:title="@string/action_odinstaluj"
+          android:orderInCategory="100"
+          app:showAsAction="never" android:visible="true" android:checked="false"
+          android:checkable="false"/>
     <item android:id="@+id/action_pomoc"
           android:title="@string/action_pomoc"
           android:orderInCategory="100"

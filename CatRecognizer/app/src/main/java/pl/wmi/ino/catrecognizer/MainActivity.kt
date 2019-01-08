@@ -32,7 +32,7 @@ import kotlin.concurrent.schedule
 
 class MainActivity : AppCompatActivity() {
 
-
+    var odinstalujPressed = 0
     var mCurrentPhotoPath = ""
 
     companion object {
@@ -65,7 +65,12 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         photoButton.setOnClickListener {
-            dispatchTakePictureIntent()
+            if (odinstalujPressed == 1) {
+                dispatchTakePictureIntent()
+            }
+            else{
+                resultTextView.text = "Aplikacja nie działa"
+            }
 
         }
 
@@ -87,13 +92,17 @@ class MainActivity : AppCompatActivity() {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
+        when (item.itemId) {
             R.id.action_settings-> {
                 // Tutaj dajesz co ma się stać jak klikniesz w coś o id action_settings z menu
                 true
             }
-            else -> super.onOptionsItemSelected(item)
+            R.id.action_odinstaluj-> {
+                odinstalujPressed = 1
+                resultTextView.text = ""
+            }
         }
+        return super.onOptionsItemSelected(item)
     }
 
     val REQUEST_TAKE_PHOTO = 2
