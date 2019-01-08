@@ -16,6 +16,7 @@ import android.view.MenuItem
 import android.view.View
 import android.graphics.Color;
 import android.media.MediaPlayer
+import android.support.v4.content.ContextCompat
 import android.util.Log
 import android.widget.Button
 
@@ -151,15 +152,20 @@ class MainActivity : AppCompatActivity() {
         BitmapFactory.decodeFile(mCurrentPhotoPath, bmOptions)?.also { bitmap ->
             imageView.setImageBitmap(bitmap)
         }
-
+        resultTextView.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark))
         resultTextView.text = "Myślę"
         val context = this
-        Timer("SettingUp", false).schedule(1000) {
+        Timer("SettingUp", false).schedule(2500) {
             runOnUiThread {
                 var sound = R.raw.cat;
-                resultTextView.text = if (RandomResult.nextResult()) "Kot"
+                resultTextView.text = if (RandomResult.nextResult()) {
+                    resultTextView.setTextColor(Color.GREEN)
+                    "Kot"
+                }
                  else {
                     sound = R.raw.not_cat
+
+                    resultTextView.setTextColor(Color.RED)
                     "Nie kot"
                 }
 
