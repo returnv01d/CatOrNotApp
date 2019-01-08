@@ -41,6 +41,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         if (day)
             setTheme(R.style.AppTheme)
         else
@@ -54,10 +56,8 @@ class MainActivity : AppCompatActivity() {
         button4.setOnClickListener{
             day = true
             recreate()
-            //screen.setBackgroundColor(Color.WHITE)
         }
         button5.setOnClickListener{
-            //screen.setBackgroundColor(Color.BLACK)
             day = false
             recreate()
         }
