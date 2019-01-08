@@ -157,17 +157,14 @@ class MainActivity : AppCompatActivity() {
         val context = this
         Timer("SettingUp", false).schedule(2500) {
             runOnUiThread {
-                var sound = R.raw.cat;
-                resultTextView.text = if (RandomResult.nextResult()) {
-                    resultTextView.setTextColor(Color.GREEN)
-                    "Kot"
-                }
-                 else {
-                    sound = R.raw.not_cat
+                val (sound, color, text) =
+                        if (RandomResult.nextResult())
+                            Triple(R.raw.cat, Color.GREEN,"Kot")
+                        else
+                            Triple(R.raw.not_cat, Color.RED, "Nie kot")
 
-                    resultTextView.setTextColor(Color.RED)
-                    "Nie kot"
-                }
+                resultTextView.text = text
+                resultTextView.setTextColor(color)
 
                 val mp = MediaPlayer.create(context, sound);
                 mp?.start()
