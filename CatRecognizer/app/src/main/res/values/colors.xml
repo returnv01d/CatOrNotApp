@@ -7,5 +7,6 @@
     <color name="darkColorPrimary">#303F9F</color>
     <color name="darkColorPrimaryDark">#303F9F</color>
     <color name="darkColorAccent">#2aac4b</color>
-
+    <color name="darkBackground">#444444</color>
+    <color name="lightBackground">#FFFFFF</color>
 </resources>

@@ -16,6 +16,7 @@ import android.view.MenuItem
 import android.view.View
 import android.graphics.Color;
 import android.media.MediaPlayer
+import android.os.PersistableBundle
 import android.support.v4.content.ContextCompat
 import android.util.Log
 import android.widget.Button
@@ -34,16 +35,32 @@ class MainActivity : AppCompatActivity() {
 
     var mCurrentPhotoPath = ""
 
+    companion object {
+        var day = true
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (day)
+            setTheme(R.style.AppTheme)
+        else
+            setTheme(R.style.AppThemeNight)
+
+        Log.d("Day", day.toString())
+
         setContentView(R.layout.activity_main)
 
+
         button4.setOnClickListener{
-            screen.setBackgroundColor(Color.WHITE)
+            day = true
+            recreate()
+            //screen.setBackgroundColor(Color.WHITE)
         }
         button5.setOnClickListener{
-            screen.setBackgroundColor(Color.BLACK)
-    }
+            //screen.setBackgroundColor(Color.BLACK)
+            day = false
+            recreate()
+        }
 
         setSupportActionBar(toolbar)
 
@@ -53,6 +70,8 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
 
 
     
