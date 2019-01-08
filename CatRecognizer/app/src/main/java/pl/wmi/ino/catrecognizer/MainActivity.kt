@@ -15,6 +15,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.graphics.Color;
+import android.media.MediaPlayer
+import android.util.Log
 import android.widget.Button
 
 import kotlinx.android.synthetic.main.activity_main.*
@@ -56,6 +58,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
+
+
         return true
     }
 
@@ -64,7 +68,10 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings-> true
+            R.id.action_settings-> {
+                // Tutaj dajesz co ma się stać jak klikniesz w coś o id action_settings z menu
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -146,10 +153,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         resultTextView.text = "Myślę"
+        val context = this
         Timer("SettingUp", false).schedule(1000) {
             runOnUiThread {
-                resultTextView.text = if (RandomResult.nextResult()) "Kot" else "Nie kot"
+                var sound = R.raw.cat;
+                resultTextView.text = if (RandomResult.nextResult()) "Kot"
+                 else {
+                    sound = R.raw.not_cat
+                    "Nie kot"
+                }
+
+                val mp = MediaPlayer.create(context, sound);
+                mp?.start()
             }
+
         }
     }
 
