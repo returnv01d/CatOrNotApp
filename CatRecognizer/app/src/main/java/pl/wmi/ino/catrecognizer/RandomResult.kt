@@ -9,12 +9,13 @@ object RandomResult {
 
     fun nextResult() : Boolean {
         val randomNumber : Double = Random().nextDouble()
-        val pivot = 0.5 + (accumulator / 6.0)
+        val pivot = 0.5 + (accumulator / 8.0)
         val result = randomNumber > pivot
 
         if (accumulator >= 0 && result) accumulator++
         else if (accumulator <= 0 && !result) accumulator--
-        else accumulator=0
+        else if (result) accumulator=1
+        else accumulator=-1
 
         return result
     }
