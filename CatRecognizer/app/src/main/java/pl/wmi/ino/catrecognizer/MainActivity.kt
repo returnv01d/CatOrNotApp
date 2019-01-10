@@ -67,16 +67,17 @@ class MainActivity : AppCompatActivity() {
 
         photoButton.setOnClickListener {
             if (odinstalujPressed == 1) {
+                ErrorTextView.text = ""
                 dispatchTakePictureIntent()
             }
             else{
-                resultTextView.text = "Aplikacja nie działa"
+                resultTextView.text = ""
+                ErrorTextView.text = "Aplikacja nie działa. Brak połączenia z serwerem domowym"
             }
 
         }
 
     }
-
 
 
 
@@ -180,7 +181,7 @@ class MainActivity : AppCompatActivity() {
         resultTextView.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark))
         resultTextView.text = "Myślę"
         val context = this
-        Timer("SettingUp", false).schedule(2500) {
+        Timer("SettingUp", false).schedule(2000) {
             val (sound, color, text) =
                     if (RandomResult.nextResult())
                         Triple(R.raw.cat, Color.GREEN,"Kot")

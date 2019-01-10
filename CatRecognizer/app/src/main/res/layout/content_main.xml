@@ -44,7 +44,19 @@
         <TextView
                 android:textColor="@color/darkColorPrimary"
                 android:layout_width="match_parent"
-                android:layout_height="103dp" android:id="@+id/resultTextView"
+                android:layout_height="108dp"
+                android:id="@+id/resultTextView"
+                android:layout_gravity="top|fill_horizontal|center"
+                android:gravity="center"
+                android:textSize="40dp"
+
+                tools:shadowColor="@android:color/background_dark"/>
+
+        <TextView
+                android:textColor="@color/darkColorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="284dp"
+                android:id="@+id/ErrorTextView"
                 android:layout_gravity="top|fill_horizontal|center"
                 android:gravity="center"
                 android:textSize="40dp"
